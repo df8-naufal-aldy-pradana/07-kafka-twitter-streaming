@@ -49,7 +49,9 @@ python kafka_consumer.py
 
 ![producer_log](docs/producer_log.png)
 
+4. Control center would look like this
 
+![control_center](docs/control_center.png)
 
 
 

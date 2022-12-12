@@ -4,6 +4,7 @@ import time
 import logging
 from src.twitter_stream import run_twitter_stream
 import src.twitter_credentials as token
+import pandas as pd
 
 logging.basicConfig(format='%(asctime)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
@@ -32,6 +33,7 @@ def receipt(err, msg):
 
 
 def main():
+    tweet_list = []
     for tweet in tweets:
         text = tweet._json["full_text"]
 
@@ -46,7 +48,13 @@ def main():
         p.poll(1)
         p.produce('twitter-tracker', m.encode('utf-8'), callback=receipt)
         p.flush()
+        tweet_list.append(refined_tweet)
+
         time.sleep(1)
+
+    # Also save tweets on csv file
+    df = pd.DataFrame(tweet_list)
+    df.to_csv('result/mumei_tweets.csv')
 
 
 if __name__ == '__main__':
