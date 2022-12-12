@@ -39,11 +39,11 @@ python kafka_consumer.py
 
 1. The producer will start streaming the tweets from twitter's API
 
-![producer](docs/producer.png)
+![producer](docs/running_producer.png)
 
 2. The consumer will start consuming the tweets from the producer
 
-![consumer](docs/consumer.png)
+![consumer](docs/running_consumer.png)
 
 3. Producer will produce log 
 
