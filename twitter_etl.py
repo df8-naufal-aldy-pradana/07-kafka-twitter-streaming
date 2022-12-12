@@ -6,6 +6,7 @@ from datetime import datetime
 def run_twitter_etl():
     
     # Twitter API credentials
+    bearer_token = "AAAAAAAAAAAAAAAAAAAAAAf1jwEAAAAAQBido%2BDdSaG63Juo%2Ba0%2FxhV%2BHLE%3D1iiyYrgEWNdrufvoZ6JujZnVtGSk3PNWQvuXvD3Da5qEOIHHMA"
     access_key = "U8dxRixLB4hnsmK6ETUIuyj6o"
     access_secret = "q0wCMs8CeK2QDFbTgwHPjSSGYrkfYmQm2glJqK4c0aMZejIMgc"
     consumer_key = "432387030-IFGBvr1ICNDPJLcKd9JUnOlnjtXErwTASOcIFuJI"
@@ -49,3 +50,4 @@ def run_twitter_etl():
     # # Create a dataframe from the tweets, and save it as a csv file    
     # df = pd.DataFrame(tweet_list)
     
+run_twitter_etl()
