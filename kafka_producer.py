@@ -4,6 +4,7 @@ import json
 import time
 import logging
 import random
+from twitter_etl import run_twitter_etl
 
 fake=Faker()
 
